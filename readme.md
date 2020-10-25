@@ -1,4 +1,4 @@
-# COVID-19 Web Application
+# The Movie Browser Web Application
 
 ## Description
 
