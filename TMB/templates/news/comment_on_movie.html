@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<main id="main">
+    <header>
+        <h1>{{date}}</h1>
+    </header>
+
+    <div style="clear:both">
+        <a href="{{movie.hyperlink}}" target="_blank">
+            <img src="{{ movie.image_hyperlink }}" onerror="this.src = 'static/Movie_logo.jpg'"/>
+        </a>
+        <h2>{{movie.title}}</h2>
+        <p>{{movie.first_para}}</p>
+        <div style="float:left">
+            {% for genre in movie.genres %}
+            <button class="btn-general-disabled" disable>{{ genre.name }}</button>
+            {% endfor %}
+        </div>
+        <div class="form-wrapper">
+            <form action="{{handler_url}}" method="post" style="color:#000000">
+                {{form.movie_id}} <!-- Need to include this hidden field as it tracks the movie being commented. -->
+                {{form.csrf_token}} <!-- Need to include this token - Flask WTForms requires it. -->
+                <br>
+                <div class ="form-field2" style="color:#000000">
+                    {{form.ratting.label}} {{form.ratting(size = 50, placeholder="enter your ratting", class="textarea", cols="50", rows="6", wrap="hard")}}
+                    {% if form.ratting.errors %}
+                    <ul class="errors">
+        	            {% for error in form.ratting.errors %}
+        		            <li>{{error}}</li>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <div class ="form-field" style="color:#000000">
+                    {{form.comment.label}} {{form.comment(size = 100, placeholder="type your comment", class="textarea", cols="50", rows="6", wrap="hard")}}
+                    {% if form.comment.errors %}
+                    <ul class="errors">
+        	            {% for error in form.comment.errors %}
+        		            <li>{{error}}</li>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                {{ form.submit }}
+            </form>
+        </div>
+        <div style="clear:both">
+            {% for comment in movie.comments %}
+                <p>{{comment.comment_text}}, by {{comment.username}}, {{comment.timestamp}}</p>
+            {% endfor %}
+        </div>
+    </div>
+</main>
+{% endblock %}

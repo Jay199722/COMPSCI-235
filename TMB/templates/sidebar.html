@@ -1,0 +1,17 @@
+<aside id="sidebar">
+
+    <header>
+        <h1>Editor's picks</h1>
+    </header>
+
+    {% for movie in selected_movies[:5] %}
+        <div id="article-container">
+            <a href="{{title_urls[movie.title]}}" >
+                <img src="{{ movie.image_hyperlink }}" onerror="this.src = 'static/Movie_logo.jpg'"/>
+            </a>
+            <div id="article-description">
+                <a href = "{{ title_urls[movie.title] }}">{{ movie.title }}, ({{ movie.date }}).</a>
+            </div>
+        </div>
+    {% endfor %}
+</aside>

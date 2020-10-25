@@ -1,0 +1,52 @@
+<nav id="nav">
+  <img id="logo" src="{{ url_for('static', filename='web logo.jpeg') }}" />
+
+  <h2 id="nav-header">
+    {% if 'username' in session %} Hello, {{ session['username'] }} {%
+    endif %}
+  </h2>
+  <a class="btn-nav" href="{{ url_for('home_bp.home') }}">Home</a>
+  <a class="btn-nav" href="{{ url_for('authentication_bp.register') }}">Register</a>
+  <a class="btn-nav" href="{{ url_for('authentication_bp.login') }}">Login</a>
+  <a class="btn-nav" href="{{ url_for('authentication_bp.logout') }}">Logout</a>
+
+  <form class="navbar-form navbar-left" action="{{ url_for('news_bp.search') }}" method="GET">
+    <p>search by:</p>
+    <input style="color:#000000" list="options" name="option" autocomplete="off" placeholder="Select filter">
+    <datalist id="options">
+      <option value="Genre">
+      <option value="Director">
+      <option value="Actor">
+      <option value="Year">
+      <option value="Title">
+    </datalist>
+    <div class="form-group">
+      <input style="color:#000000" type="text" class="form-control" placeholder="Key Words" name="keyword">
+    </div>
+    <button type="submit" class="btn-general2" >search</button>
+  </form>
+
+  <h3 id="sub-nav-header">Browse by genre</h3>
+  <div class="outer-container">
+    <div class="inner-container">
+      <div class="slider" id="slider">
+    	{% for key in genre_urls %}
+          <a class="btn-nav" href="{{ genre_urls[key] }}">{{ key }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <h3 id="sub-nav-header1">Browse by director</h3>
+  <div class="outer-container">
+    <div class="inner-container">
+      <div class="slider" id="slider">
+    	{% for key in director_urls %}
+          <a class="btn-nav" href="{{ director_urls[key] }}">{{ key }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div id="nav-footer">
+    COMPSCI235 A2 by yzhb870
+  </div>
+</nav>

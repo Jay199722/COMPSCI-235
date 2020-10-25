@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+p2{
+    font-size: 32px;
+}
+
+body,
+html {
+    height: 100%;
+    background-image: url(../wbkg.jpg);
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+img{
+    max-width:200px;
+    max-height:200px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+h2{
+    color: white;
+}
+
+img {
+  display: block;
+  width: 500px;
+  height: auto;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+head{
+    overflow: hidden;
+}
+
+.img-small {
+    display: block;
+    width: 300px;
+    height: auto;
+    padding: 5px;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.btn-nav {
+  padding: 10px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: white;
+  display: block;
+}
+
+.btn-nav:hover {
+  background-color: #594f8d;
+  color: #fff;
+}
+
+.btn-general {
+    background-color: deepskyblue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    float:left;
+}
+
+.btn-general2 {
+    background-color: deepskyblue;
+    color: white;
+    width: 100%;
+}
+
+.btn-general-disabled {
+    background-color: slategrey;
+    border: none;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    float:left;
+    #opacity: 0.6;
+}
+
+.btn-general:hover {
+    background-color: #8acd32;
+    color: black;
+}
+
+.textarea {
+    width: 100%;
+    overflow: auto;
+    word-break: break-all;
+    color: black;
+}
+
+#body {
+    min-height: 100%;
+    margin-bottom: -60px;
+    font-size: medium;
+}
+
+#header {
+    padding: 20px;
+    background: black;
+    border-bottom: 1px solid #e0e4e8;
+    font-size: 64px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#content-2 {
+    height: 100%;
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+}
+
+#nav {
+  width: 200px;
+  height: 240vh;
+  background-color: rgba(0,0,0,0.5);
+  padding: 30px 0px;
+  position: absolute;
+}
+
+#nav-header {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 12px;
+}
+
+#sub-nav-header {
+  color: #fff;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+#sub-nav-header1 {
+  color: #fff;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+#nav-footer {
+  color: #fff;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  position: absolute;
+  bottom: 0;
+  font-size: small;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+#main {
+  margin: 20px;
+  color: #717171;
+  line-height: 25px;
+  padding: 10px;
+  width: 66.666667%;
+}
+
+#logo {
+  width: 150px;
+}
+
+#sidebar {
+    background-color: rgba(0,0,0,0.5);
+    color: #717171;
+    width: 33.333333%;
+    min-height: 100vh;
+    height: 226vh;
+    padding: 20px;
+    border-bottom: 1px solid #e0e4e8;
+}
+
+#article-header {
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#article {
+    clear:both;
+    margin-bottom:100px;
+}
+
+#article-footer {
+    font-size: 32px;
+}
+
+#article-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+input[type='text'],
+    select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+input[type='password'],
+    select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+input[type='submit'] {
+    width: 100%;
+     background-color: #7532cd;
+     color: white;
+     padding: 14px 20px;
+     margin: 8px 0;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+}
+
+input[type='submit']:hover {
+    background-color: #8acd32;
+    color: black;
+}
+
+.icon {
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: -0.5em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.slider {
+    overflow: auto;
+    height: 100%;
+    width: 217px;
+}
+
+.search{
+    height: 100px;
+    width: 100%;
+}
+.search input{
+    float: top;
+    width: 100%;
+}
+
+
+/* 下拉按钮样式 */
+.dropbtn {
+    background-color: #4CAF50;
+    display: inline-block;
+    width: 160px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* 容器 <div> - 需要定位下拉内容 */
+.dropdown {
+    min-width: 160px;
+    min-height: 80px;
+    position: relative;
+    display: inline-block;
+}
+
+/* 下拉内容 (默认隐藏) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* 下拉菜单的链接 */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* 鼠标移上去后修改下拉菜单链接颜色 */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* 在鼠标移上去后显示下拉菜单 */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* 当下拉内容显示后修改下拉按钮的背景颜色 */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.form-field2{
+    height: 60px;
+    width: 120px;
+    overflow: hidden;
+    flow: left;
+}
+
+.outer-container{
+	width: 200px;
+	height: 30%;
+	position: relative;
+	overflow: hidden;
+}
+.inner-container{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: -17px;
+	bottom: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
